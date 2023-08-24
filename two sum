@@ -9,7 +9,7 @@ Output: [0,1]
 def twoSum(self, nums: List[int] , target: int):
 
                                                            # Create a dictionary to store the mapping of numbers to their indices
-    hash_Map = {}                                           # value: index   {0:1, 1:7......... }
+    hash_Map = {}                                           # Creating an empty Dictionary  value: index   {0:1, 1:7......... }
     for i, n in enumerate (nums):                           #  (0, 2)(1, 7)(3, 11)(4, 15)
         diff = target - n                                   # diff = 9-2 =7
         if diff in hash_Map:                                #  If the diff exists in the dictionary, return the indices:  7 don't exist initially    ///// for exmaple2, diff = 6-3 = 3 , still no
@@ -36,3 +36,14 @@ thisdict = {
   "model": "Mustang",
   "year": 1964
 }
+# Creating an empty Dictionary
+Dict = {}
+print("Empty Dictionary: ")
+print(Dict)
+  
+# Adding elements one at a time
+Dict[0] = 'Geeks'
+Dict[2] = 'For'
+Dict[3] = 1
+print("\nDictionary after adding 3 elements: ")
+print(Dict)
