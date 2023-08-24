@@ -1,0 +1,22 @@
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]
+######## Hash map (also known as a dictionary)
+def twoSum(self, nums: List[int] , target: int):
+
+                                                            # Create a dictionary to store the mapping of numbers to their indices
+    hash_Map = {}                                           # value: index   {0:1, 1:7......... }
+    for i, n in enumerate (nums):
+        diff = target - n                                   # diff = 9-2 =7
+        if diff in hash_Map:                                #  If the diff exists in the dictionary, return the indices
+          return [hash_Map[diff], i]                        # return pair of index (0,1 )
+        hash_Map[n] = i                                     # Otherwise, add the current number to the dictionary 
+
+
+enumerate:::  gives the index of an element while iterating over a list.................................
+fruits = [(15,"Fifteen"), (12,"Twelve"), (19,"Nineteen")]
+ for i,j in enumerate(fruits):
+     print(i,j)
+0 (15, 'Fifteen')
+1 (12, 'Twelve')
+2 (19, 'Nineteen')
