@@ -15,13 +15,24 @@ def twoSum(self, nums: List[int] , target: int):
         if diff in hash_Map:                                #  If the diff exists in the dictionary, return the indices:  7 don't exist initially    ///// for exmaple2, diff = 6-3 = 3 , still no
           return [hash_Map[diff], i]                        # return pair of index (0,1 )
         hash_Map[n] = i                                     # Otherwise, add the current number (2) to the dictionary  hash_Map = {2:0, }}
-
+        print(hash_Map)
 @@ for second value, (1,7)--> diff = 9-7 =2, MAtch, so return (hash_MAP[2], 1 ) --> return [0, 1] 
+for nums = [2, 11,  15, 7]..... print(hash_Map)
+{2: 0}
+{2: 0, 11: 1}
+{2: 0, 11: 1, 15: 2}
 
-enumerate:::  gives the index of an element while iterating over a list ///// a list of tuples using the list() function...........
+
+@@@ enumerate:::  gives the index of an element while iterating over a list ///// a list of tuples using the list() function...........
 fruits = [(15,"Fifteen"), (12,"Twelve"), (19,"Nineteen")]
  for i,j in enumerate(fruits):
      print(i,j)
 0 (15, 'Fifteen')
 1 (12, 'Twelve')
 2 (19, 'Nineteen')
+@@@ Dictionaries {} are used to store data values in key:value pairs.
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
