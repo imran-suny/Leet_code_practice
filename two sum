@@ -47,3 +47,14 @@ Dict[2] = 'For'
 Dict[3] = 1
 print("\nDictionary after adding 3 elements: ")
 print(Dict)
+
+
+List
+# string
+x = 'bug'
+print(len(x))
+
+# list
+y = ['pig', 'cow', 'horse']
+print(len(y))
+https://github.com/joeyajames/Python/blob/master/Intro%20to%20Python%20Data%20Structures/Python%20Data%20Structures.ipynb
