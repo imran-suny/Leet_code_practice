@@ -12,10 +12,11 @@ def twoSum(self, nums: List[int] , target: int):
     hash_Map = {}                                           # value: index   {0:1, 1:7......... }
     for i, n in enumerate (nums):                           #  (0, 2)(1, 7)(3, 11)(4, 15)
         diff = target - n                                   # diff = 9-2 =7
-        if diff in hash_Map:                                #  If the diff exists in the dictionary, return the indices :  7 don't exist initially    ///// for exmaple2, diff = 6-3 = 3 , still no
+        if diff in hash_Map:                                #  If the diff exists in the dictionary, return the indices:  7 don't exist initially    ///// for exmaple2, diff = 6-3 = 3 , still no
           return [hash_Map[diff], i]                        # return pair of index (0,1 )
-        hash_Map[n] = i                                     # Otherwise, add the current number to the dictionary  no 7 in the list initially, so hash_Map= {0:0, }
+        hash_Map[n] = i                                     # Otherwise, add the current number (2) to the dictionary  hash_Map = {2:0, }}
 
+@@ for second value, (1,7)--> diff = 9-7 =2, MAtch, so return (hash_MAP[2], 1 ) --> return [0, 1] 
 
 enumerate:::  gives the index of an element while iterating over a list ///// a list of tuples using the list() function...........
 fruits = [(15,"Fifteen"), (12,"Twelve"), (19,"Nineteen")]
