@@ -1,3 +1,6 @@
+https://leetcode.com/problems/3sum/
+https://medium.com/j-t-tech/leetcode-15-3sum-357978a0898d
+
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         if len(nums) < 3: # Requires 3 for a pair of 3
