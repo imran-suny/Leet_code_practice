@@ -27,7 +27,6 @@ class Solution:
                 return True
         return False
 
-Approach 3: Hash Set O(n)
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         seen = set()  #### create unique element 
@@ -50,15 +49,28 @@ class Solution:
         for num in nums:
             if num in seen and seen[num] >= 1:
                 return True
-            seen[num] = seen.get(num, 0) + 1  # retrieves the value associated with the key num from the seen. If the key is not present in the dictionary, it returns 0 and increse 1
+            seen[num] = seen.get(num, 0) + 1  # retrieves the value associated with the key num from the seen. 
+                                              #If the key is not present in the dictionary, it returns 0 and increases 1
         return False
 
 # get() method is used with dictionaries to retrieve the value associated with a given key.
-# seen.get(num, 0) + 1 adds 1 to the count retrieved from the dictionary. This effectively increments the count for the current element. 
-If num is not in the dictionary, it creates a new key-value pair with num as the key and a count of 1.
+# If num is not in the dictionary, it creates a new key-value pair with num as the key and a count of 1.
+@@@@@@@ get 
+student_scores = {
+    "Alice": 95,
+    "Bob": 87,
+    "Charlie": 92
+}
 
-numbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+# Retrieving values using get()
+alice_score = student_scores.get("Alice", 0)
+dave_score = student_scores.get("Dave", 0)
+print(alice_score)  # Output: 95
+print(dave_score)   # Output: 0
+Approach 3: Hash Set O(n)
+
+numbers = [1, 2, 2, 3, 3, 4, ]
 seen = {}
 for num in numbers:
-    seen[num] = seen.get(num, 0) + 1
-print(seen)  # Output: {1: 1, 2: 2, 3: 3, 4: 4}
+    seen[num] = seen.get(num, 0) + 1  ## count korbe koto bar ache 
+print(seen)  # Output: {1: 1, 2: 2, 3: 2, 4: 1}
