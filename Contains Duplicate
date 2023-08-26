@@ -30,11 +30,11 @@ class Solution:
 Approach 3: Hash Set O(n)
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        seen = set()
+        seen = set()  #### create unique element 
         for num in nums:
             if num in seen:
                 return True
-            seen.add(num)
+            seen.add(num) # add korte hobe set a 
         return False
 
 # set() is a built-in data type and function that is used to create a collection of unique elements. Sets are similar to lists, but they don't allow duplicate values
@@ -46,11 +46,11 @@ class Solution:
 Approach 4: Hash Map O(n)
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        seen = {}
+        seen = {} # dict 
         for num in nums:
             if num in seen and seen[num] >= 1:
                 return True
-            seen[num] = seen.get(num, 0) + 1  #  retrieves the value associated with the key num from the dictionary seen. If the key is not present in the dictionary, it returns 0
+            seen[num] = seen.get(num, 0) + 1  # retrieves the value associated with the key num from the seen. If the key is not present in the dictionary, it returns 0 and increse 1
         return False
 
 # get() method is used with dictionaries to retrieve the value associated with a given key.
