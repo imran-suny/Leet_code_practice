@@ -35,5 +35,35 @@ for i in range(len(s)):
 {'a': 2, 'n': 1, 'g': 1, 'r': 1}
 {'a': 3, 'n': 1, 'g': 1, 'r': 1}
 {'a': 3, 'n': 1, 'g': 1, 'r': 1, 'm': 1}
->             
+>       
+
+FOR LOOP:
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+apple
+banana
+cherry
+
+for i in range(5):
+    print(i)
+0
+1
+2
+3
+4
+message = "Hello"
+for char in message:
+    print(char)
+H
+e
+l
+l
+o
+person = {"name": "Alice", "age": 30, "occupation": "engineer"}
+for key, value in person.items():
+    print(f"{key}: {value}")
+name: Alice
+age: 30
+occupation: engineer
         
