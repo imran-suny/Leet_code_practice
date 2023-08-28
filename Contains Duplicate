@@ -47,7 +47,7 @@ class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         seen = {} # dict 
         for num in nums:
-            if num in seen and seen[num] >= 1:
+            if num in seen and seen[num] >= 1:  # Output: {1: 1, 2: 2, 3: 2, 4: 1} value should be greater than 1 to be duplicate
                 return True
             seen[num] = seen.get(num, 0) + 1  # retrieves the value associated with the key num from the seen. 
                                               #If the key is not present in the dictionary, it returns 0 and increases 1
