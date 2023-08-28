@@ -16,7 +16,7 @@ class Solution:
 
         for i in range(len(s)):
             countS[s[i]] = 1 + countS.get(s[i], 0) # if s[i] in hashmap, then 1 and continue, or else value: 0+1=1,key = a/b..
-            countT[t[i]] = 1 + countT.get(t[i], 0) # second string 
+            countT[t[i]] = 1 + countT.get(t[i], 0) # get()-- dictionary.get( value/jake count korbo, 0) +1
         return countS == countT
 
 Example 1:
