@@ -30,10 +30,20 @@ class Solution:
                 elif threeSum < 0:
                     l += 1
                 else:
-                    res.append([a, nums[l], nums[r]]) # add kore dibo list a 0 hole 
+                    res.append([a, nums[l], nums[r]]) # append add element to a list []...dekte L[ r moto //// add kore dibo list a 0 hole 
                     l += 1 # need to update the pointer,  
                     r -= 1
                     while nums[l] == nums[l - 1] and l < r:  #  duplicates of left pointer removes or smaller than the target.
                         l += 1 # l update korlei holbe cause while a threSum > 0 hole right pointer -1 korbe
                         
         return res
+
+1. check len(num) < 3 kina?
+2. len(nums) == 3 and sum(nums) == 0 ??
+3. sob value positive kina? a > 0 ? sorting kore enumerate diye value check ??
+4. duplicate kina? index >0 i.e. 2ta hote hobe minimum /// Current == previous value? hole continue
+5.then pointer set kora ,, from second index as our first value a=target
+6. check left or right pointer duplicate kina?? 
+
+
+
