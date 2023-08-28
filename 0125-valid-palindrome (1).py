@@ -7,7 +7,7 @@ class Solution:
     def isPalindrome(self, s: str) -> bool:
         l, r = 0, len(s) - 1  ## two pointer 
         while l < r:
-            while l < r and not self.alphanum(s[l]):  ## check if alphanum, na hole increment the left pointer, 1
+            while l < r and not self.alphanum(s[l]):  ##  for the function to convert alphanum// check if alphanum, na hole increment the left pointer, 1
                 l += 1
             while l < r and not self.alphanum(s[r]):
                 r -= 1
