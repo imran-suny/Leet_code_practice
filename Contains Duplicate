@@ -6,7 +6,7 @@ Output: true
 Example 2:22
 Input: nums = [1,2,3,4]
 Output: false
-Brute_force
+S1: Brute_force
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         n = len(nums)
@@ -17,7 +17,7 @@ class Solution:
         return False
 The time complexity of this approach is O(n^2)
 
-sorting  O(nlongn)
+S2: sorting  O(nlongn)
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         nums.sort()
@@ -27,7 +27,7 @@ class Solution:
                 return True
         return False
 
-class Solution:
+S3: class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         seen = set()  #### create unique element 
         for num in nums:
