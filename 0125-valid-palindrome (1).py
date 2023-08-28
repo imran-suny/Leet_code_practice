@@ -9,7 +9,7 @@ class Solution:
         while l < r:
             while l < r and not self.alphanum(s[l]):  ##  for the function to convert alphanum// check if alphanum, na hole increment the left pointer, 1
                 l += 1
-            while l < r and not self.alphanum(s[r]):
+            while l < r and not self.alphanum(s[r]): # jodi alnum na hoy(i.g.-space) , thle increment hole next if loop a
                 r -= 1
             if s[l].lower() != s[r].lower():  # only compare when alphanum, otherwise, next pointer 
                 return False
