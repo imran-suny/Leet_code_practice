@@ -20,7 +20,7 @@ class Solution:
     # Could write own alpha-numeric function
     def alphanum(self, c):
         return (
-            ord("A") <= ord(c) <= ord("Z")
+            ord("A") <= ord(c) <= ord("Z") # The ord() function returns the number representing the unicode code of a specified character.
             or ord("a") <= ord(c) <= ord("z")
             or ord("0") <= ord(c) <= ord("9")
         )
