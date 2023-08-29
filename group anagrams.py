@@ -1,6 +1,13 @@
 Input: strs = ["eat","tea","tan","ate","nat","bat"]
 Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+@List : [] ordered and changeable. Allows duplicate members.//
+@Tuple : () used to store multiple items in a single variable// ordered and unchangeable. Allows duplicate members.//
+@Set : set() contructor or {}  to create....unordered, unchangeable*, and unindexed. No duplicate members.//
+@Dictionary: {} ordered** and changeable. No duplicate members.//
+example:
 
+thistuple = { "apple", "banana", "cherry", "apple", "cherry"}-- dictionary, so no duplicate {'apple', 'banana', 'cherry'} but tuple/ () hole all print.
+print(thistuple)
 
 
 class Solution:
@@ -15,7 +22,7 @@ class Solution:
             ans[tuple(count)].append(s)
             print(ans)
         return ans.values()
-
+1. 
 
 ### prit
 count [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
