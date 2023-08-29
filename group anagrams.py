@@ -27,7 +27,7 @@ class Solution:
             for c in s:
                 count[ord(c) - ord("a")] += 1 # [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
                 # print('count', count)
-            ans[tuple(count)].append(s)
+            ans[tuple(count)].append(s) # append() is a method that is available for lists. 
             print(ans)
         return ans.values()
 ### prit
