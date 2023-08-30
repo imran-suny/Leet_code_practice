@@ -1,6 +1,6 @@
 Input: nums = [1,1,1,2,2,3], k = 2
 Output: [1,2]
-1. get count // reverse index // take reverse number 
+1. get count dictionary // reverse count store // append the number in new list // if len list == k, return list[0:1]
 
 
 class Solution:
