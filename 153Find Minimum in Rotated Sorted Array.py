@@ -13,11 +13,11 @@ class Solution:
             if(nums[mid+1] < nums[mid]):           # 1<5 , so retrun 1
                 return nums[mid+1]
             
-            # right has the min 
+            # right has the min # right a thakle strat k shift korbo
             if nums[mid] > nums[end]:               # right a min hole start pointer to mid+1
                 start = mid + 1
                 
-            # left has the  min                      # end ke mid a niya asbo
+            # left has the  min                      # end ke mid a niya asbo//left a thakle end ke shift korbo
             else:
                 end = mid
                 
