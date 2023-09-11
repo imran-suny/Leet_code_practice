@@ -5,11 +5,20 @@ Output: 1
 
 class Solution:
     def findMin(self, nums: List[int]) -> int:
-        l, r = 0, len(nums) - 1
-        while l < r:
-            m = l + (r - l) // 2   # 
-            if nums[m] > nums[r]:  # 5>2, 
-                l = m + 1     #  l= 2+1=3
+        start , end = 0 ,len(nums) - 1 
+        curr_min = float("inf")
+        
+        while start  <  end :
+            mid = (start + end ) // 2              # 0+4//2 =2 (floor mane purno sonkha)
+            if(nums[mid+1] < nums[mid]):           # 1<5 , so retrun 1
+                return nums[mid+1]
+            
+            # right has the min 
+            if nums[mid] > nums[end]:               # right a min hole start pointer to mid+1
+                start = mid + 1
+                
+            # left has the  min                      # end ke mid a niya asbo
             else:
-                r = m   # right pointer change to mid if nums[m] < nums[r] or nums[m] < nums[l]
-        return nums[l]
+                end = mid
+                
+        return nums[start]
