@@ -15,7 +15,7 @@ class Solution:
                 max_profit =max(currentProfit,max_profit)  #
             else:
                 left = right                               # 7,1 = -6// so left ke update left = right and right += 1 ke always update korbo 
-            right += 1
+            right += 1    # move left pointer to the right position and increment our right pointer by 1. We always want our left point to be minimum.
         return max_profit
 
   
