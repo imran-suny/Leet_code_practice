@@ -35,6 +35,6 @@ class Solution:
                 while s[right] in charSet: # we move the left pointer forward, removing characters from the set until the repeating character is no longer present
                     charSet.remove(s[left])
                     left += 1
-                charSet.add(s[right])
+                charSet.add(s[right]) # olny add the last one after removing all left
         
         return maxLength
