@@ -3,6 +3,17 @@ https://takeuforward.org/data-structure/stock-buy-and-sell-dp-35/
 
 Input: prices = [7,1,5,3,6,4]
 Output: 5
+Bruteforce:
+# Calculate the difference between the prices for each pair, and keep track of the maximum difference (profit)
+def max_profit(prices):
+    max_profit = 0
+    for i in range(len(prices)):
+        for j in range(i+1, len(prices)):
+            profit = prices[j] - prices[i]
+            max_profit = max(max_profit, profit)
+    return max_profit
+	
+
 ## 2 pointer solution 
 class Solution:
     def maxProfit(self,prices):
