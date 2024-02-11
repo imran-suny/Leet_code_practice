@@ -10,12 +10,12 @@ class Solution:
         stack = [] # 
 
         for c in s:
-            if c not in Map:
-                stack.append(c) 
-                continue   # append [  ( [ {   ]  # cuase era nai key te  
-            if not stack or stack[-1] != Map[c]:  # if stack not empty and na mille [ stake value != Map value ]  { exist in key value, so pop()-- last er ra '{'
-                 return False
-            stack.pop()
-
-        return not stack
+            if c in Map:  # key match korle 
+                if stack or stack[-1] = Map[c]:  ## value match korbo  ')' 
+                    stack.pop() ---------------------------------------------'(' ke pop korbe, stack empty, true for ()
+                else:
+                    return False
+             else:   
+                stack.append(c)     # '('
+        return True if not stack else False
 
