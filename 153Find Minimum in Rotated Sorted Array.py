@@ -6,7 +6,6 @@ Output: 1
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         start , end = 0 ,len(nums) - 1 
-        curr_min = float("inf")
         
         while start  <  end :
             mid = (start + end ) // 2              # 0+4//2 =2 (floor mane purno sonkha)
@@ -15,8 +14,7 @@ class Solution:
             
             # right has the min # right a thakle strat k shift korbo
             if nums[mid] > nums[end]:               # right a min hole start pointer to mid+1
-                start = mid + 1
-                
+                start = mid + 1              
             # left has the  min                      # end ke mid a niya asbo//left a thakle end ke shift korbo
             else:
                 end = mid
