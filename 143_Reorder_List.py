@@ -16,10 +16,21 @@ class Solution:
         
         n1, n2 = head, prev
         while n2.next != None:
-            tmp = n1.next
+            tmp1 = n1.next,             tmp2 = n2.next
             n1.next = n2
-            n1 = tmp
             
-            tmp = n2.next
+
             n2.next = n1
-            n2 = tmp
+            
+            n1 = tmp1
+            n2 = tmp2
+
+
+        # merge two halfs
+        first, second = head, prev
+        while second:
+            tmp1, tmp2 = first.next, second.next
+            first.next = second
+            second.next = tmp1
+            first, second = tmp1, tmp2
+            
