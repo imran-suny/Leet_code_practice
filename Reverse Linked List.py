@@ -7,7 +7,7 @@ class Solution:
 
         while curr:                 # not empty 
             temp = curr.next        # ekta temp varibale to save the value  (2)
-            curr.next = prev        # curr.next= direction reverse (2)er
+            curr.next = prev        # curr.next= direction reverse (1)er, null er dike
             prev = curr             # update pointer prev= curr, curr=  temp
             curr = temp
         return prev
