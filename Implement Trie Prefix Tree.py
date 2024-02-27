@@ -27,7 +27,7 @@ class Trie:
             if curr.children[i] == None:  # if a char not exist, return false 
                 return False
             curr = curr.children[i]       #else finish the word
-        return curr.end   # return true, if curr.end=True
+        return curr.end   # return true if end of word , if curr.end=True
 
     def startsWith(self, prefix: str) -> bool:
         curr = self.root
