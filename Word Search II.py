@@ -1,5 +1,5 @@
 https://leetcode.com/problems/word-search-ii/description/
-
+https://leetcode.com/problems/word-search-ii/solutions/4702197/62-1-approach-1-o-m-n-4-k-python-c-step-by-step-explanation/
 class TrieNode:
     def __init__(self):
         self.children = {}
