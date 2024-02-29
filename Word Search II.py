@@ -69,7 +69,7 @@ class Solution:
             
             node = node.children[board[r][c]]  # current position in board 
             word += board[r][c]                # need to form a word using the board position 
-            if node.isWord:                    # if node is end of work, we add the word in res
+            if node.isWord:                    # # If a word is found, add it to the result set, # mark it as not a word in the trie, and remove it.
                 node.isWord = False
                 res.add(word)
                 root.removeWord(word)
