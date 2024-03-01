@@ -4,12 +4,12 @@ class MedianFinder:
         self.small, self.large = [], []
 
     def addNum(self, num: int) -> None:
-        # If large heap is not empty and the number is greater than the smallest number in large heap,
+        # If large heap is not empty and the number >  smallest number in large heap,
         # push it to the large heap. Otherwise, push the negation of the number to the small heap.
         if self.large and num > self.large[0]:
-            heapq.heappush(self.large, num)
+            heapq.heappush(self.large, num)            # large a min heap  
         else:
-            heapq.heappush(self.small, -1 * num)
+            heapq.heappush(self.small, -1 * num)       # max heap at left side 
 
         # Balance the heaps by adjusting their sizes if necessary
         if len(self.small) > len(self.large) + 1:
@@ -26,9 +26,6 @@ class MedianFinder:
         elif len(self.large) > len(self.small):
             return self.large[0]
         return (-1 * self.small[0] + self.large[0]) / 2.0
-
-
-
 
 import heapq
 max_heap = []
