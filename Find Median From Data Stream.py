@@ -53,4 +53,26 @@ max_heap
 4
 2
 1
-    
+
+min_heap = []
+heapq.heapify(min_heap)
+# Adding elements to the min heap
+elements = [4, 2, 7, 1, 9, 5]
+for elem in elements:
+    heapq.heappush(min_heap, elem)
+    print(min_heap)
+while min_heap:
+    min_elem = heapq.heappop(min_heap)
+    print(min_elem)
+[4]
+[2, 4]
+[2, 4, 7]
+[1, 2, 7, 4]
+[1, 2, 7, 4, 9]
+[1, 2, 5, 4, 9, 7]
+1
+2
+4
+5
+7
+9    
