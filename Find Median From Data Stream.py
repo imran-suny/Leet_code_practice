@@ -26,3 +26,31 @@ class MedianFinder:
         elif len(self.large) > len(self.small):
             return self.large[0]
         return (-1 * self.small[0] + self.large[0]) / 2.0
+
+
+
+
+import heapq
+max_heap = []
+heapq.heapify(max_heap)
+elements = [4, 2, 7, 1, 9, 5]
+for elem in elements:
+    heapq.heappush(max_heap, -elem)
+    print(max_heap)
+while max_heap:
+    max_elem = -heapq.heappop(max_heap)
+    print(max_elem)
+[-4]
+[-4, -2]
+[-7, -2, -4]
+[-7, -2, -4, -1]
+[-9, -7, -4, -1, -2]
+[-9, -7, -5, -1, -2, -4]
+max_heap
+9
+7
+5
+4
+2
+1
+    
