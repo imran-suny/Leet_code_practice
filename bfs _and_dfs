@@ -1,0 +1,13 @@
+https://medium.com/basecs/breaking-down-breadth-first-search-cebe696709d9
+DFS- pre order, root-left-left-right/ recursive stack,   BFS-each level- root, left, right,  queue, iterative, queue
+     1                        
+  /     \
+ 2        5
+/  \     /  \
+3   4   6   7   DFS- [1,2,3,4,backtracking, 5,6,7]  
+[4] left subtree--- 2,3,4 pop hole  5,6,7 push hobe  nodes to visit
+[3]
+[2]
+[1]
+
+For BFS we need a queue, [1,2,5,3,4,6,7]-- 1 visited hole, 2,5 1 ke remove, add 2,5 r children 
