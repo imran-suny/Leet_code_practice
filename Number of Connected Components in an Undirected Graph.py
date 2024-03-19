@@ -1,4 +1,5 @@
-
+https://www.youtube.com/watch?v=qWGh4S86Exw
+https://www.geeksforgeeks.org/connected-components-in-an-undirected-graph/
 class UnionFind:
     def __init__(self, n):
         self.parent = [i for i in range(n)]
@@ -30,3 +31,5 @@ def count_connected_components(n, edges):
     for n1, n2 in edges:
         uf.union(n1, n2)
     return uf.count 
+
+############# dfs solution ############
