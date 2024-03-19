@@ -33,3 +33,31 @@ def count_connected_components(n, edges):
     return uf.count 
 
 ############# dfs solution ############
+n = 5= given nodes 
+edges = [(0, 1), (1, 2), (3, 4)]
+
+def dfs(graph, visited, node):
+    visited.add(node)                   # 0, 
+    for neighbor in graph[node]:        # 1, 0, 2,1 ==visited , stop dfs stop , count +1,  then node 1 r jonno dfs 
+        if neighbor not in visited:
+            dfs(graph, visited, neighbor)
+
+def count_connected_components(n, edges):       # make edges 
+    graph = [ [] for _ in range(n)]
+    for u, v in edges:         # 0,1 ,,, graph[0]= 1,  graph[1]= [0,.. next 2 
+        graph[u].append(v)  
+        graph[v].append(u)#  [[1], [0, 2], [1], [4], [3]]
+
+    visited = set()
+    count = 0
+    for i in range(n):             # evry node, if not visited visit using dfs and count +1
+        if i not in visited:
+            dfs(graph, visited, i)
+            count += 1
+    return count
+
+# Example usage:
+n = 5
+edges = [(0, 1), (1, 2), (3, 4)]
+print(count_connected_components(n, edges))  # Output should be 2
+
