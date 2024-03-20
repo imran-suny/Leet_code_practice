@@ -23,7 +23,7 @@ class Solution:
                     adj[w1[j]].add(w2[j])    #  adj    w: [e], r: [t], t: [f], f:[w], e:[r] 
                     break
 
-        visited = {}  # {char: bool} False visited, True current path
+        visited = {}  #  # {char: bool} False: unvisited, True: visiting
         res = []
 
         def dfs(char): 
@@ -33,13 +33,65 @@ class Solution:
             visited[char] = True
             for neighChar in adj[char]:
                 if dfs(neighChar):
-                    return True                     #  w not in visited, w:true,      e: true [w r neighbor]               r: t, t: t, f:true              
-            visited[char] = False                   # cycle hole false 
+                    return True                     #If cycle is detected, return True   w not in visited, w:true,      e: true [w r neighbor]               r: t, t: t, f:true              
+            visited[char] = False                   # # Backtrack: Mark the current character as not being visited in the current path 
             res.append(char)                        # f, t,r,e, w
 
 
         for char in adj:
-            if dfs(char):    # dfs return true or false: true hole empty string , res a result reverse hoye save
+            if dfs(char):    #If a cycle is detected during DFS, return an empty string indicating invalid alien orde
                 return ""                         # sesh hole w pabe, cycle hole return empty string 
         res.reverse()
         return "".join(res)
+
+
+adj = {
+    1: [2, 3],
+    2: [4],
+    3: [],
+    4: [5],
+    5: []
+}
+
+visited = {}  # {node: bool} False: unvisited, True: visiting
+res = []
+
+def dfs(node):
+    if node in visited:
+        return visited[node]
+    visited[node] = True
+    for neighbor in adj[node]:
+        if dfs(neighbor):
+            return True
+    visited[node] = False
+    res.append(node)
+for node in adj:
+    if dfs(node):
+        print("Cycle detected!")
+        break
+res.reverse()
+print("DFS order:", res)
+
+Start DFS from node 1.
+Visit node 1 and mark it as visited.
+Explore neighbors of node 1: nodes 2 and 3.
+Start DFS from node 2 (neighbor of node 1).
+Visit node 2 and mark it as visited.
+Explore neighbors of node 2: node 4.
+Start DFS from node 4 (neighbor of node 2).
+Visit node 4 and mark it as visited.
+Explore neighbors of node 4: node 5.
+Start DFS from node 5 (neighbor of node 4).
+Visit node 5 and mark it as visited.
+Node 5 has no outgoing edges, so append it to the result list.
+Backtrack to node 4.
+Node 4 has been fully explored, so append it to the result list.
+Backtrack to node 2.
+Node 2 has been fully explored, so append it to the result list.
+Backtrack to node 1.
+Node 1 has one more unvisited neighbor (node 3).
+Start DFS from node 3 (neighbor of node 1).
+Visit node 3 and mark it as visited.
+Node 3 has no outgoing edges, so append it to the result list.
+Backtrack to node 1.
+Node 1 has been fully explored, so append it to the result list
