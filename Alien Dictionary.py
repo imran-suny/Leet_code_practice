@@ -27,21 +27,19 @@ class Solution:
         res = []
 
         def dfs(char): 
-            if char in visited:
+            if char in visited:                 # visited hole empty/cycle na hole results
                 return visited[char]  
 
             visited[char] = True
-
             for neighChar in adj[char]:
                 if dfs(neighChar):
                     return True                     #  w not in visited, w:true,      e: true [w r neighbor]               r: t, t: t, f:true              
-
             visited[char] = False                   # cycle hole false 
             res.append(char)                        # f, t,r,e, w
 
-        for char in adj:
-            if dfs(char):
-                return ""                         # sesh hole w pabe, cycle hole return empty string 
 
+        for char in adj:
+            if dfs(char):    # dfs return true or false: true hole empty string , res a result reverse hoye save
+                return ""                         # sesh hole w pabe, cycle hole return empty string 
         res.reverse()
         return "".join(res)
