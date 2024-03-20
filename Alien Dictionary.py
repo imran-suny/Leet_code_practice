@@ -95,3 +95,4 @@ Visit node 3 and mark it as visited.
 Node 3 has no outgoing edges, so append it to the result list.
 Backtrack to node 1.
 Node 1 has been fully explored, so append it to the result list
+[5, 4, 2, 3, 1]
