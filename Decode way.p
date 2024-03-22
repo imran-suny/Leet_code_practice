@@ -17,7 +17,7 @@ class Solution:
                   s[i] == "1" or         s[i] == "2" and s[i + 1] in "0123456"
             ):
                 res += dfs(i + 2)   #  dfs(2) = 1+  dfs(3)= 1+1 =2 
-            dp[i] = res             # dp[0:3]
+            dp[i] = res             # dp[    3:1, dfs(2)=1 mane 2:1, 
             return res
         return dfs(0)
 
