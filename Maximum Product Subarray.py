@@ -3,6 +3,10 @@ Input: nums = [2,3,-2,4]
 Output: 6
 Explanation: [2,3] has the largest product 6
 
+To find the maximum product of a subarray, we need to consider both positive and negative numbers.
+We'll iterate through the array and keep track of the maximum and minimum product ending at each position. 
+At each step, we update these values considering the current number, and also considering the possibility of the current number being negative.
+
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
   
