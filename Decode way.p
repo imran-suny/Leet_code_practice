@@ -3,7 +3,7 @@ Input: s = "226", Output: 3 ///koto upaye decode ??
 Explanation: "226" could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
 
 # Memoization
-class Solution:
+class Solution: 
     def numDecodings(self, s: str) -> int:
         dp = {len(s): 1}          # dp= {3:1}
         def dfs(i):
