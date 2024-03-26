@@ -11,9 +11,10 @@ class Solution:
     def insert( self, intervals, newInterval):
         res = []
         for i in range(len(intervals)):          
-            if newInterval[1] < intervals[i][0]:         #   [[1, 3], [6, 9], [11, 15]], new= [4, 5] and intervals[i] = [6, 9], we can insert [4, 5] before [6, 9]
+            if newInterval[1] < intervals[i][0]:         
                 res.append(newInterval)
-                return res + intervals[i:]
+                return res + intervals[i:]          #   [[1, 3], [6, 9], [11, 15]], new= [4, 5] and intervals[i] = [6, 9], we can insert [4, 5] before [6, 9]
+                
             elif newInterval[0] > intervals[i][1]:       # , if newInterval = [16, 18] and intervals[i] = [11, 15], we can continue to the next interval
                 res.append(intervals[i])
             else:                                              # overlap hole min , max 
