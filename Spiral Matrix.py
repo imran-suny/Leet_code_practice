@@ -11,22 +11,22 @@ class Solution:
         result = []
         
         while len(result) < rows * cols:
-            for i in range(left, right+1):            # get every i in the top row
+            for i in range(left, right+1):            # top row-- top--- i column change 
                 result.append(matrix[top][i])
-            top += 1
+            top += 1                                  # top count --1
             
-            for i in range(top, bottom+1):            # get every i in the right col
-                result.append(matrix[i][right])
-            right -= 1
+            for i in range(top, bottom+1):            # top to bottom from right
+                result.append(matrix[i][right])       # row change, column =right 
+            right -= 1                                # right komte thakte jeetu niche jabe 
             
-            if top <= bottom:                            # get every i in the bottom row
-                for i in range(right, left-1, -1):
-                    result.append(matrix[bottom][i])
+            if top <= bottom:                          # top and bottom overlap na kora porjinto 
+                for i in range(right, left-1, -1):     #reverse from right to left 
+                    result.append(matrix[bottom][i])   # coum change, bottom 
                 bottom -= 1
             
-            if left <= right:                            # get every i in the left col
-                for i in range(bottom, top-1, -1):
-                    result.append(matrix[i][left])
+            if left <= right:                           # get every i in the left col
+                for i in range(bottom, top-1, -1):      
+                    result.append(matrix[i][left])      # row change, coloum left 
                 left += 1
         
         return result
