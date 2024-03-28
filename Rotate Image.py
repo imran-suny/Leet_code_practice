@@ -38,11 +38,11 @@ class Solution:
                 top, bottom = l, r
                 topLeft = matrix[top][l + i]                    # save the topleft
               
-                matrix[top][l + i] = matrix[bottom - i][l]      # move bottom left into top left
+                matrix[top][l + i] = matrix[bottom - i][l]      # move bottom left into top left       # i komte thakbe bottom r, 7 r pore 4.....
                
-                matrix[bottom - i][l] = matrix[bottom][r - i]   # move bottom right into bottom left
+                matrix[bottom - i][l] = matrix[bottom][r - i]   # move bottom right into bottom left   # i komte thakbe bottom r, 9-8
 
-                matrix[bottom][r - i] = matrix[top + i][r]      # move top right into bottom right
+                matrix[bottom][r - i] = matrix[top + i][r]      # move top right into bottom right  # top i barbe  3>6
 
                 matrix[top + i][r] = topLeft                    # move top left into top right
             r -= 1
