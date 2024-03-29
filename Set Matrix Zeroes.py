@@ -8,15 +8,15 @@ class Solution:
         ROWS, COLS = len(matrix), len(matrix[0])
         rowZero = False
 
-        # determine which rows/cols need to be zero
+        # determine which rows/cols need to be zero    
         for r in range(ROWS):
             for c in range(COLS):
                 if matrix[r][c] == 0:
-                    matrix[0][c] = 0 # first row kore kore felbo 
-                    if r > 0:
-                        matrix[r][0] = 0  # first colum zero
+                    matrix[0][c] = 0       # first row kore kore felbo 
+                    if r > 0:              # except row zero///for row zero--we have a dedicated flag 
+                        matrix[r][0] = 0   # first column zero
                     else:
-                        rowZero = True
+                        rowZero = True      # for row zero
 
         for r in range(1, ROWS):
             for c in range(1, COLS):
