@@ -8,7 +8,7 @@ class Solution:
         ROWS, COLS = len(matrix), len(matrix[0])
         rowZero = False
 
-        # determine which rows/cols need to be zero    
+        # determine which rows/cols need to be zero///first row skip,      
         for r in range(ROWS):
             for c in range(COLS):
                 if matrix[r][c] == 0:
