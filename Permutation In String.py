@@ -20,15 +20,15 @@ class Solution:
             if matches == 26:
                 return True
 
-            index = ord(s2[r]) - ord("a")      # right pointer increase 
-            s2Count[index] += 1                 
+            index = ord(s2[r]) - ord("a")            # right pointer increase 
+            s2Count[index] += 1                      # added a new char       
             if s1Count[index] == s2Count[index]:
                 matches += 1
-            elif s1Count[index] + 1 == s2Count[index]:   # 1 ta beshi holei komabo  2
+            elif s1Count[index] + 1 == s2Count[index]:   # 1 add s2Count[index] += 1    howar pore count 1 ta beshi hole, reduce
                 matches -= 1
 
-            index = ord(s2[l]) - ord("a")        # left drcrease pointer increase
-            s2Count[index] -= 1
+            index = ord(s2[l]) - ord("a")            # left drcrease pointer increase/  
+            s2Count[index] -= 1                      # remove the chracter
             if s1Count[index] == s2Count[index]:
                 matches += 1
             elif s1Count[index] - 1 == s2Count[index]:
