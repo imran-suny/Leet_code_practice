@@ -14,13 +14,13 @@ class Solution:
 
   Recursively:
 class Solution:
-    def reverse(self, head: ListNode) -> ListNode:
+    def reverse(self, head: ListNode): #  function is called with the head node pointing to 1.
         if not head:
           return None
           
         newHead = head   # head diye suru always 
          if head.next:
-           newHead= self.reverse (head.next)
-           head.next.next = head
+           newHead= self.reverse (head.next) # head is not None and it has a next node (2),...5, 
+           head.next.next = head #  it doesn't have a next node, it returns the head itself (i.e., 2) back up the recursion stac
          head.next = None
       return newHead
