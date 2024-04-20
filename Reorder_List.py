@@ -13,7 +13,7 @@ class Solution:
             curr.next = prev               # 
             prev = curr
             curr = tmp
-        
+        # merge 
         n1, n2 = head, prev
         while n2.next != None:
             tmp1 = n1.next,             tmp2 = n2.next
