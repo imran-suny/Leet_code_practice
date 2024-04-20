@@ -14,7 +14,7 @@ class Solution:
             prev = curr
             curr = tmp
         # merge 
-        n1, n2 = head, prev
+        n1, n2 = head, prev              # prev = 5
         while n2.next != None:
             tmp1 = n1.next,             tmp2 = n2.next
             n1.next = n2            
