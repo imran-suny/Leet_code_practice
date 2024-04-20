@@ -6,7 +6,7 @@ class Solution:
         right = head
 
         while n > 0:             # 1>2>3>4----1>2>4    # n=1 , r= 2,, 
-            right = right.next
+            right = right.next   # left and right r distance hobe n, or 2 here    left=0, right= 2
             n -= 1
 
         while right:              
