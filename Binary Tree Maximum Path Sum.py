@@ -9,8 +9,8 @@ https://leetcode.com/problems/binary-tree-maximum-path-sum/solutions/603423/pyth
  		if node is None:
  			return 0
 	
- 	        gain_on_left = max(get_max_gain(node.left), 0)              # take maximum value between 0 and maximum gain from left branch   -1, -2, -3 > all (-)ve,hence select 0  
- 		gain_on_right = max(get_max_gain(node.right), 0)            # 
+ 	        gain_on_left = max(get_max_gain(node.left), 0)              # take maximum value between 0 and maximum gain from left branch     
+ 		gain_on_right = max(get_max_gain(node.right), 0)            # -1, -2, -3 > all (-)ve,hence select 0
 			
  		current_max_path = node.val + gain_on_left + gain_on_right  # for a simple tree, 1,2,3--> 1+2+3= 6    ///split hole 
  		max_path = max(max_path, current_max_path)                  # select max, -inf, 6 ...> 6 
