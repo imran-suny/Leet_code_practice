@@ -26,3 +26,12 @@ class Solution:
         
         dfs(0, [], 0)     # Start DFS traversal from index 0 with an empty current combination and total sum 0
         return result
+
+1. Define the DFS function.
+2. Within the function, initialize the i, cur, and total arguments.
+3. Check if total equals the target. If yes, we must to append into res our cur.copy
+4. Check if total exceeds the target and i exceeds the length of candidates.
+5. Append the current candidates[i] to cur.
+6. Recursively call the function with i, cur, and total + candidates[i].
+7. Remove the last number from cur (to try another one).
+8. Recursively call the function again, but increment i by 1.
