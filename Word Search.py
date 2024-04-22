@@ -17,7 +17,7 @@ class Solution:
                 return False
             path.add((r, c))                # if not false, means match, add to path,  Mark current cell as visited
             res = (
-                dfs(r + 1, c, i + 1)        # # Recursively explore adjacent cells of (r,c)
+                dfs(r + 1, c, i + 1)        # # Recursively explore adjacent cells of (r,c), we cant visit (r,c)again, so set()
                 or dfs(r - 1, c, i + 1)
                 or dfs(r, c + 1, i + 1)
                 or dfs(r, c - 1, i + 1)
