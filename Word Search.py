@@ -15,14 +15,14 @@ class Solution:
                 or (r, c) in path            # path not visited twice
             ):
                 return False
-            path.add((r, c))                #  Mark current cell as visited
+            path.add((r, c))                # if not false, means match, add to path,  Mark current cell as visited
             res = (
-                dfs(r + 1, c, i + 1)        # # Recursively explore adjacent cells
+                dfs(r + 1, c, i + 1)        # # Recursively explore adjacent cells of (r,c)
                 or dfs(r - 1, c, i + 1)
                 or dfs(r, c + 1, i + 1)
                 or dfs(r, c - 1, i + 1)
             )
-            path.remove((r, c))            # # Backtrack: remove current cell from path
+            path.remove((r, c))            # # clean, Backtrack: remove current cell from path, we no longer need matching one
             return res
 
         # To prevent TLE,reverse the word if frequency of the first letter is more than the last letter's
