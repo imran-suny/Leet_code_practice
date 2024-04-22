@@ -50,7 +50,8 @@ max_heap
 4
 2
 1
-
+A min-heap is often implemented using an array, where for a node at index i,
+the left child is at 2*i + 1, the right child is at 2*i + 2, and the parent is at (i - 1) // 2
 min_heap = []
 heapq.heapify(min_heap)
 # Adding elements to the min heap
