@@ -5,16 +5,16 @@ Explanation: "226" could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6
 # Memoization
 class Solution: 
     def numDecodings(self, s: str) -> int:
-        dp = {len(s): 1}          # dp= {3:1}
+        dp = {len(s): 1}          # dp= {3:1}, FOR BASE cases
         def dfs(i):
-            if i in dp:           # dfs(0),...   dfs(3) te gele 1 return hobe 
+            if i in dp:           # dfs(0),...   dfs(3) te gele 1 return hobe //base 
                 return dp[i]
             if s[i] == "0":       # base case, 0 diye start hote parbe na 
                 return 0
-            res = dfs(i + 1)      # res= dfs(1)> dfs(2)> dfs(3) te gele 1 return hobe///means dfs(3) return 1,  
+            res = dfs(i + 1)      #  for single digit res= dfs(1)> dfs(2)> dfs(3) te gele 1 return hobe
             
-            if i + 1 < len(s) and (                                 # double r jonno, 1 or 2 diye start hobe, 11,12--19 or 20,21-26
-                  s[i] == "1" or         s[i] == "2" and s[i + 1] in "0123456"
+            if i + 1 < len(s) and (                       # double r jonno, 1 or 2 diye start hobe, 11,12--19 or 20,21-26
+                  s[i] == "1" or s[i] == "2" and s[i + 1] in "0123456"
             ):
                 res += dfs(i + 2)   #    dfs (2) jabe na cause 2+1< lens(s) not, so dfs (1)
             dp[i] = res             #   [3:1, 2:1] > dfs (1) -- res= 1 [3:1, 2:1  1: 1+1] > dfs(0)--- [3:1, 2:1  1: 2  0: 2+1 [dfs(1) + dfs(2)]))]
