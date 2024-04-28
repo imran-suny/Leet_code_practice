@@ -11,7 +11,7 @@ class Solution:
                 return dp[i]
             if s[i] == "0":       # base case, 0 diye start hote parbe na 
                 return 0
-            res = dfs(i + 1)      #  for single digit res= dfs(1)> dfs(2)> dfs(3) te gele 1 return hobe
+            res = dfs(i + 1)      #  for single digit res= dfs(0>)dfs(1)> dfs(2)> dfs(3) te gele 1 return hobe base----1 way 
             
             if i + 1 < len(s) and (                       # double r jonno, 1 or 2 diye start hobe, 11,12--19 or 20,21-26
                   s[i] == "1" or s[i] == "2" and s[i + 1] in "0123456"
@@ -22,10 +22,9 @@ class Solution:
         return dfs(0)
 
 Here's how dfs(2) is calculated:
-Check  2 in the dp dictionary. Since it's not, continue with the calculation.
-Check if the current digit s[i] is '0'. In this case, s[2] = '6', which is not '0', so we proceed.
-Calculate res by recursively calling dfs(i + 1), which is dfs(3). Now, dfs(3) calculates the number of ways to decode the substring starting from index 3. 
-Since index 3 is out of bounds (the string has length 3), it returns 1 (because there's one way to decode an empty string).
+Check  2 in the dp dictionary. continue, Check current digit s[i] is '0'. s[2] = '6', so we proceed.
+Calculate res by recursively calling dfs(i + 1), which is dfs(3) res=1  
+Since index 3 is out of bounds (the string has length 3), it returns 1  ,,, dp[3:1]
 Back to dfs(1), res becomes res = dfs(2) = 1.
 Now, we check if the substring starting from index 1 and the next digit form a valid two-digit encoding.
 Since '22' is a valid encoding, we add the number of ways to decode the substring starting from index 2 to res.
