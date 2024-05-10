@@ -1,33 +1,26 @@
 https://leetcode.com/problems/course-schedule-ii/description/
 https://leetcode.com/problems/course-schedule-ii/solutions/4741931/86-1-approach-1-o-v-e-python-c-step-by-step-explanation/
-
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
-        # Step 1: Build a dictionary to represent the prerequisite graph
         prereq = {c: [] for c in range(numCourses)}
         for crs, pre in prerequisites:
             prereq[crs].append(pre)
-
-        # Initialize variables to track visited courses and cycles
         output = []
         visit, cycle = set(), set()
 
         # Define a DFS function to traverse the graph
-        def dfs(crs):
-            # If the course is in a cycle, return False
-            if crs in cycle:
+        def dfs(crs):         
+            if crs in cycle:  # If the course is in a cycle, means node-1 theke start kore dfs node-1 a jay jodi
                 return False
-            # If the course has already been visited, return True
-            if crs in visit:
+            if crs in visit:  # If the course has already been visited, 2-[], visited hole return true 
                 return True
 
-            # Add the course to the cycle set
-            cycle.add(crs)
+            cycle.add(crs)     # Add the course to the cycle set, dfs er last value 
             # Recursively explore prerequisites
             for pre in prereq[crs]:
                 if dfs(pre) == False:
                     return False
-            # Remove the course from the cycle set
+            # Remove the course from the cycle set/ dfs er last value
             cycle.remove(crs)
             # Add the course to the visited set and output list
             visit.add(crs)
