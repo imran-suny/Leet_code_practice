@@ -29,3 +29,12 @@ class Solution:
         for n1, n2 in edges:
             if not union(n1, n2):
                 return [n1, n2]
+
+
+######examples
+par = {1: 1, 2: 1, 3: 2, 4: 2, 5: 4}
+find(5)...
+Start with p = 5; since par[p] is 4, update p = 4.
+par[4] is 2, update p = 2.
+par[2] is 1, update p = 1. Now, p == par[p].
+Since you've reached the root, return 1.
