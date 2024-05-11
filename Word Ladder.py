@@ -28,3 +28,23 @@ class Solution:
                             q.append(neiWord)
             res += 1
         return 0
+beginWord = "hit"
+endWord = "cog"
+wordList = ["hot", "dot", "dog", "lot", "log", "cog"]
+nei = {'*ot': ['hot', 'dot', 'lot'],
+       'h*t': ['hot'],
+       'ho*': ['hot'],
+                      '*ot': ['dot', 'lot'],
+                      'd*t': ['dot', 'dog'],
+                      'do*': ['dot', 'dog'],
+       '*og': ['dog', 'log', 'cog'],
+       'd*g': ['dog'],
+       'do*': ['dog'],
+                      'l*t': ['lot'],
+                      'lo*': ['lot', 'log'],
+        'l*g': ['log'],
+       'lo*': ['log'],
+      '*og': ['log', 'cog'],
+                      'c*g': ['cog'],
+                      'co*': ['cog']}
+
