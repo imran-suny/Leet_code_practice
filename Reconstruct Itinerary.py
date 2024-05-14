@@ -33,25 +33,25 @@ gggggg ['ACL', 'SJC', 'SFO', 'LHR', 'MUC', 'JFK']
 graph="JFK":deque(["ATL","MUC"]),"MUC":deque(["LHR"]),"LHR":deque(["SFO"]),"SFO":deque(["SJC"]),"ATL":deque(["JFK","SFO"])
 Start at "JFK":
 dfs("JFK")
-"JFK" -> "ATL":
-dfs("ATL")
-"ATL" -> "JFK":
-dfs("JFK")
-"JFK" -> "MUC":
-dfs("MUC")
-"MUC" -> "LHR":
-dfs("LHR")
-"LHR" -> "SFO":
-dfs("SFO")
-"SFO" -> "SJC":
-dfs("SJC")
-"SJC" has no more destinations; append "SJC"
-Append "SFO"
-Append "LHR"
-Append "MUC"
-Append "JFK"
-"ATL" -> "SFO":
-dfs("SFO")
+  "JFK" -> "ATL":
+     dfs("ATL")
+        "ATL" -> "JFK":
+           dfs("JFK")
+             "JFK" -> "MUC":
+                dfs("MUC")
+                  "MUC" -> "LHR":
+                     dfs("LHR")
+                        "LHR" -> "SFO":
+                           dfs("SFO")
+                            "SFO" -> "SJC":
+                               dfs("SJC")
+                                 "SJC" has no more destinations; append "SJC"
+                                Append "SFO"
+                          Append "LHR"
+                  Append "MUC"
+             Append "JFK"
+     "ATL" -> "SFO":
+ dfs("SFO")
 dfs("SJC") was already called, so append "SFO"
 Append "ATL"
 Append "JFK
