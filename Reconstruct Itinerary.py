@@ -8,15 +8,14 @@ class Solution:
         itinerary = []     
         def dfs(airport):
             while graph[airport]:
-                next_airport = graph[airport].popleft()  # Get the next destination
-                dfs(next_airport)
+                next_airport = graph[airport].popleft()  # ACL
+                dfs(next_airport)  # ACL nai r so exit from while loop and add 
             itinerary.append(airport)  #  print('gggggg', itinerary)
             
         dfs("JFK")
         return itinerary[::-1] 
 
 # tickets =  [["MUC", "LHR"], ["JFK", "MUC"], ["JFK", "ACL"], ["SFO", "SJC"], ["LHR", "SFO"]]
-# print(sol.findItinerary(tickets))  # Output: ['JFK', 'MUC', 'LHR', 'SFO', 'SJC', 'ACL']
 deque(['ACL', 'MUC'])
 gggggg ['ACL']
 deque(['MUC'])
@@ -28,3 +27,4 @@ gggggg ['ACL', 'SJC', 'SFO']
 gggggg ['ACL', 'SJC', 'SFO', 'LHR']
 gggggg ['ACL', 'SJC', 'SFO', 'LHR', 'MUC']
 gggggg ['ACL', 'SJC', 'SFO', 'LHR', 'MUC', 'JFK']
+# Output: ['JFK', 'MUC', 'LHR', 'SFO', 'SJC', 'ACL']
