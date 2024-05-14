@@ -15,7 +15,6 @@ class Solution:
         dfs("JFK")
         return itinerary[::-1] 
 
-# sol = Solution()
 # tickets =  [["MUC", "LHR"], ["JFK", "MUC"], ["JFK", "ACL"], ["SFO", "SJC"], ["LHR", "SFO"]]
 # print(sol.findItinerary(tickets))  # Output: ['JFK', 'MUC', 'LHR', 'SFO', 'SJC', 'ACL']
 deque(['ACL', 'MUC'])
