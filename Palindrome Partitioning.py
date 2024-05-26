@@ -56,12 +56,12 @@ For end = 3: current_sub = "b", which is a palindrome.
 Append "b" to path: path = ["aa", "b"]
 Call backtrack(3, ["aa", "b"]).
 New Base Case:
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 start = 3 (end of string), path = ["aa", "b"]
 Append path[:] to result: result = [["a", "a", "b"], ["aa", "b"]]
 Backtrack: Remove "b" from path: path = ["aa"]
 Backtrack to Initial Call:
------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 start = 2, path = ["aa"]
 Continue loop: No more end to check.
 Backtrack: Remove "aa" from path: path = []
