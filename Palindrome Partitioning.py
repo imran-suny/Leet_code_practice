@@ -19,35 +19,22 @@ class Solution:
         backtrack(0, [])
         return result
 
-"aab" backtrack(0, []): Start at index 0 with an empty path.
-start = 0, path = []
-Loop through end from 1 to 3.
-For end = 1: current_sub = "a", which is a palindrome.
-Append "a" to path: path = ["a"]
-Call backtrack(1, ["a"]).
+"aab" backtrack(0, []), start = 0, path = []
+Loop through end from 1 to 3, For end = 1: current_sub = "a", which is a palindrome., Append "a" to path: path = ["a"], Call backtrack(1, ["a"]).
 Second Level of Backtracking:
 
-start = 1, path = ["a"]
-Loop through end from 2 to 3.
-For end = 2: current_sub = "a", which is a palindrome.
-Append "a" to path: path = ["a", "a"]
-Call backtrack(2, ["a", "a"]).
+start = 1, path = ["a"], Loop through end from 2 to 3...For end = 2: current_sub = "a", which is a palindrome.
+Append "a" to path: path = ["a", "a"] Call backtrack(2, ["a", "a"]).
 Third Level of Backtracking:
 
-start = 2, path = ["a", "a"]
-Loop through end from 3 to 3.
-For end = 3: current_sub = "b", which is a palindrome.
-Append "b" to path: path = ["a", "a", "b"]
-Call backtrack(3, ["a", "a", "b"]).
-Base Case:
+start = 2, path = ["a", "a"]...Loop through end from 3 to 3...For end = 3: current_sub = "b", which is a palindrome.
+Append "b" to path: path = ["a", "a", "b"]...Call backtrack(3, ["a", "a", "b"]).
 
-start = 3 (end of string), path = ["a", "a", "b"]
+Base Case: start = 3 (end of string), path = ["a", "a", "b"]
 Append path[:] to result: result = [["a", "a", "b"]]
-Backtrack: Remove "b" from path: path = ["a", "a"]
-Backtrack to Second Level of Backtracking:
+Backtrack: Remove "b" from path: path = ["a", "a"] Backtrack to Second Level of Backtracking:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-start = 2, path = ["a", "a"]
-Continue loop: No more end to check.
+start = 2, path = ["a", "a"] Continue loop: No more end to check.
 Backtrack: Remove "a" from path: path = ["a"]
 Continue First Level of Backtracking:
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
