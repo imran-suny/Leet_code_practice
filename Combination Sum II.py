@@ -10,18 +10,18 @@ Output:
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
         ans = []
-        def backtrack(i, comb, tot):
+        def backtrack(i, subset, tot):
             if tot == target:
-                ans.append(comb[:])
+                ans.append(subset[:])
                 return
             if i >= len(candidates) or tot > target:
                 return
             for idx in range(i, len(candidates)):
                 if idx > i and candidates[idx] == candidates[idx - 1]:          # Skip duplicates to avoid repeating the same combination.
                     continue
-                comb.append(candidates[idx])
+                subset.append(candidates[idx])
                 backtrack(idx + 1, comb, tot + candidates[idx])
-                comb.pop()
+                subset.pop()
         candidates.sort()
         backtrack(0, [], 0)
         return ans
