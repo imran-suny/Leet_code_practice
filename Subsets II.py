@@ -1,3 +1,7 @@
+Input: nums = [1,2,2]
+Output: [[],[1],[1,2],[1,2,2],[2],[2,2]]
+The solution set must not contain duplicate subsets. Return the solution in any order.
+
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
         res = []
