@@ -12,7 +12,7 @@ class Solution:
             for end in range(start + 1, len(s) + 1):
                 current_sub = s[start:end]
                 if is_palindrome(current_sub):
-                    path.append(current_sub)
+                    subset.append(current_sub)
                     backtrack(end, subset)
                     subset.pop()
         result = []
