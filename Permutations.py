@@ -37,3 +37,21 @@ class Solution:
             res.extend(perms)
             nums.append(n)
         return res
+
+First Iteration:
+
+Remove 1: nums = [2, 3]
+Recursive call with nums = [2, 3]
+Remove 2: nums = [3]
+Recursive call with nums = [3]
+Base case: return [[3]]
+Add 2 to each permutation: [[3, 2]]
+Restore 2: nums = [2, 3]
+Remove 3: nums = [2]
+Recursive call with nums = [2]
+Base case: return [[2]]
+Add 3 to each permutation: [[2, 3]]
+Restore 3: nums = [2, 3]
+Add 1 to each permutation: [[3, 2, 1], [2, 3, 1]]
+Restore 1: nums = [1, 2, 3]
+
