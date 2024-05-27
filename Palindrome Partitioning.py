@@ -5,16 +5,16 @@ class Solution:
         def is_palindrome(sub):
             return sub == sub[::-1]
         
-        def backtrack(start: int, path: List[str]):
+        def backtrack(start: int, subset):
             if start == len(s):
-                result.append(path[:])
+                result.append(subset[:])
                 return
             for end in range(start + 1, len(s) + 1):
                 current_sub = s[start:end]
                 if is_palindrome(current_sub):
                     path.append(current_sub)
-                    backtrack(end, path)
-                    path.pop()
+                    backtrack(end, subset)
+                    subset.pop()
         result = []
         backtrack(0, [])
         return result
