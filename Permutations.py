@@ -21,3 +21,19 @@ For i = 0, nums[:0] + nums[1:] gives [3] and path + [nums[0]] gives [1, 2]. Call
 Loop through [3].
 For i = 0, nums[:0] + nums[1:] gives [] and path + [nums[0]] gives [1, 2, 3] Call backtrack([], [1, 2, 3]).
 Since nums is empty, append [1, 2, 3] to result
+
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        # base case
+        if len(nums) == 1:
+            return [nums[:]]  # nums[:] is a deep copy
+            
+        for i in range(len(nums)):
+            n = nums.pop(0)
+            perms = self.permute(nums)
+            for perm in perms:
+                perm.append(n)
+            res.extend(perms)
+            nums.append(n)
+        return res
