@@ -62,14 +62,11 @@ minHeap initially contains:
 Iteration 1:
 Pop the smallest element: [3, 101, 1, 1] from User 1....Add 101 to res.
 Push the next tweet from User 1: [2, 3, 1, 0].
-Iteration 2:
-Pop the smallest element: [2, 3, 1, 0] from User 1.
-Add 3 to res.
-Push the next tweet from User 1: [1, 5, 1, -1].
-Iteration 3:
-Pop the smallest element: [1, 5, 1, -1] from User 1.
-Add 5 to res.
-No more tweets from User 1 to push.
+Iteration 2: Pop the smallest element: [2, 3, 1, 0] from User 1.
+Add 3 to res. Push the next tweet from User 1: [1, 5, 1, -1].
+Iteration 3: Pop the smallest element: [1, 5, 1, -1] from User 1.
+Add 5 to res. No more tweets from User 1 to push.
+
 Iteration 4:
 Pop the smallest element: [4, 201, 2, 0] from User 2.
 Add 201 to res.
