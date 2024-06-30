@@ -1,3 +1,6 @@
+Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"
+Output: true
+
 https://leetcode.com/problems/interleaving-string/solutions/4776962/109-1-approach-1-recursive-approach-o-m-n-python-c-step-by-step-explanation/
 class Solution:
     def isInterleave(self, s1: str, s2: str, s3: str) -> bool:
