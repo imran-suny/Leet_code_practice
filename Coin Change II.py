@@ -20,7 +20,7 @@ class Solution:
 
         # DYNAMIC PROGRAMMING # Time: O(n*m)  # Memory: O(n*m)
         dp = [[0] * (len(coins) + 1) for i in range(amount + 1)]
-        dp[0] = [1] * (len(coins) + 1)
+        dp[0] = [1] * (len(coins) + 1)  # [[1, 1, 1, 1], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
         for a in range(1, amount + 1):
             for i in range(len(coins) - 1, -1, -1):
                 dp[a][i] = dp[a][i + 1]
