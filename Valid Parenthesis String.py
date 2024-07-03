@@ -8,7 +8,7 @@ class Solution:
 
         for c in s:
             if c == "(":
-                leftMin, leftMax = leftMin + 1, leftMax + 1
+                leftMin, leftMax = leftMin + 1, leftMax + 1    # number of left open parenthesis 
             elif c == ")":
                 leftMin, leftMax = leftMin - 1, leftMax - 1
             else:
