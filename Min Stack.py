@@ -11,7 +11,7 @@ class MinStack:
     def push(self, val: int) -> None:
         self.stack.append(val)
         val = min(val, self.minStack[-1] if self.minStack else val) #minStack  reflects the minimum element at each step.
-        self.minStack.append(val)
+        self.minStack.append(val)           # [-3, 0, -2]  --> [-3, -2, -2]
 
     def pop(self) -> None:
         self.stack.pop()
