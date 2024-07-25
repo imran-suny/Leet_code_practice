@@ -2,7 +2,7 @@ https://leetcode.com/problems/reverse-nodes-in-k-group/description/
 https://leetcode.com/problems/reverse-nodes-in-k-group/solutions/4672340/44-1-approach-1-o-n-python-c-step-by-step-explanation/
 class Solution:
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
-        dummy = ListNode(0, head)          #A dummy node is created to simplify edge cases (e.g., reversing the first group).
+        dummy = ListNode(0, head)      #  reversing the  group
         groupPrev = dummy              # groupPrev is initialized to point to the dummy node
 
         while True:              # The loop continues until there are no more groups of k nodes to reverse.
@@ -18,10 +18,11 @@ class Solution:
                 curr.next = prev
                 prev = curr
                 curr = tmp
-
+                
+           # Connect the reversed group to the rest of the list.
             tmp = groupPrev.next 
-            groupPrev.next = kth  #updated to point to the new head of the reversed group (kth)
-            groupPrev = tmp    #  updated to point to the last node of the reversed group (tmp)
+            groupPrev.next = kth           #updated to point to the new head of the reversed group (kth)
+            groupPrev = tmp                #  updated to point to the last node of the reversed group (tmp)
         return dummy.next
 
     def getKth(self, curr, k):
