@@ -1,4 +1,5 @@
 https://leetcode.com/problems/reverse-nodes-in-k-group/description/
+https://leetcode.com/problems/reverse-nodes-in-k-group/solutions/4672340/44-1-approach-1-o-n-python-c-step-by-step-explanation/
 class Solution:
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
         dummy = ListNode(0, head)          #A dummy node is created to simplify edge cases (e.g., reversing the first group).
