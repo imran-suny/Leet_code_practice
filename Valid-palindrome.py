@@ -6,7 +6,7 @@ Explanation: "amanaplanacanalpanama" is a palindrome.
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         l, r = 0, len(s) - 1  ## two pointer 
-        while l < r:
+        while l < r:  # majhkaneer ta bas so l<=r na 
             while l < r and not self.alphanum(s[l]):  ##  for the function to convert alphanum// check if alphanum, na hole increment the left pointer, 1
                 l += 1
             while l < r and not self.alphanum(s[r]): # jodi alnum na hoy(i.g.-space) , thle increment hole next if loop a
