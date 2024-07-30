@@ -1,5 +1,5 @@
 https://leetcode.com/problems/trapping-rain-water/description/
-
+https://youtu.be/ZI2z5pq0TqA
 class Solution:
     def trap(self, height: List[int]) -> int:
         if not height:
