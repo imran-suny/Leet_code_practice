@@ -24,9 +24,9 @@ class Solution:
             elif s1Count[index] + 1 == s2Count[index]: # If count of character in s2 (after incrementing) exceeds count of character in s1 by exactly 1,
                                                        #it means this character's frequency was matching before incrementing, but now it doesn't match anymore, so matches is decremented by 1      
                 matches -= 1
-
-            index = ord(s2[l]) - ord("a")
-            s2Count[index] -= 1
+            # nicher index calculates the position of the character to be excluded in the alphabet.
+            index = ord(s2[l]) - ord("a")         #The left index l moves forward to exclude the character at the left end of the window from the current window.
+            s2Count[index] -= 1       #decrements the count of this character in the current window            # 
             if s1Count[index] == s2Count[index]:
                 matches += 1
             elif s1Count[index] - 1 == s2Count[index]:
