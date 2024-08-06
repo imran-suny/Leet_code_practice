@@ -2,7 +2,7 @@ Input: nums = [1,3,-1,-3,5,3,6,7], k = 3 Output: [3,3,5,5,6,7]
 class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         output = []
-        q = collections.deque()  # index
+        q = collections.deque()  # nums er index add korbo  # q = deque([1, 2])
         l = r = 0
         # O(n) O(n)
         while r < len(nums):
@@ -10,8 +10,8 @@ class Solution:
                 q.pop()
             q.append(r)
            
-            if l > q[0]:   # remove left val from window
-                q.popleft()
+            if l > q[0]:   # if the index at the front of the deque is outside the current window
+                q.popleft()  # q = deque([4])  if 2 > 4: q.popleft()
 
             if (r + 1) >= k: If the window size is reached, append the maximum value to the result
                 output.append(nums[q[0]])
