@@ -2,8 +2,10 @@ Input: s = "ADOBECODEBANC", t = "ABC"
 Output: "BANC"
 Input: s = "a", t = "aa"
 Output: ""
-sliding window: count the t, and find similar number of t in s, similar hole find len of window, remove from left, updte the two count again, check window[s[l]] < countT[s[l]]?
-the character s[l] is 'O', and window['O'] is 1, while countT['O'] is 0 (as 'O' is not in string t). The condition window[s[l]] < countT[s[l]] is false, so the code doesn't decrement have.
+sliding window: count t, and find similar number of t in s, similar hole find len of window, 
+remove from left, updte the two count again, check window[s[l]] < countT[s[l]]?
+the character s[l] is 'O', and window['O'] is 1, while countT['O'] is 0 (as 'O' is not in string t). 
+The condition window[s[l]] < countT[s[l]] is false, so the code doesn't decrement have.
 
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
@@ -25,7 +27,6 @@ class Solution:
                 have += 1
 
             while have == need:
-                # update our result
                 if (r - l + 1) < resLen:
                     res = [l, r]
                     resLen = r - l + 1
