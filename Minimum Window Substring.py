@@ -23,7 +23,7 @@ class Solution:
             c = s[r]
             window[c] = 1 + window.get(c, 0)
 
-            if c in countT and window[c] == countT[c]:
+            if c in countT and window[c] == countT[c]:  # value same hole 
                 have += 1
 
             while have == need:
@@ -32,7 +32,7 @@ class Solution:
                     resLen = r - l + 1
                 # pop from the left of our window
                 window[s[l]] -= 1
-                if s[l] in countT and window[s[l]] < countT[s[l]]:   #A remove korar pore, A in countT=true, 0<1: have kome jabe, 
+                if s[l] in countT and window[s[l]] < countT[s[l]]:   #A remove korar pore, A in countT=true, window{A:0}<countT{A:1}, value have kome jabe, 
                     have -= 1
                 l += 1                                               # left barate thakbo
         l, r = res
