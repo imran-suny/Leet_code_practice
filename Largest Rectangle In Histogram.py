@@ -1,4 +1,8 @@
 https://leetcode.com/problems/largest-rectangle-in-histogram/description/
+pop: Remove and return the top element of the stack.
+push: Add an element to the top of the stack   
+stack[-1]: View the top element of the stack without removing it.
+
 class Solution:
     def largestRectangleArea(self, heights: List[int]) -> int:
         maxArea = 0
