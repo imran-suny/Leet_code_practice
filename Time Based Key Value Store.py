@@ -18,7 +18,7 @@ class TimeMap:
         l, r = 0, len(values) - 1
         while l <= r:
             m = (l + r) // 2
-            if values[m][1] <= timestamp:  # # If the timestamp at mid is less than or equal to the target timestamp
+            if values[m][1] <= timestamp:  #  any valid timestamp must be to the left of m. this timestamp is a candidate for the most recent timestamp
                 res = values[m][0]  # return value 
                 l = m + 1
             else:
