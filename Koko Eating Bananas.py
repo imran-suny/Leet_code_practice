@@ -12,7 +12,7 @@ class Solution:
             totalTime = 0
             for p in piles:
                 totalTime += math.ceil(float(p) / k)  # piles r value vag korbo 
-            if totalTime <= h:
+            if totalTime <= h:   # time kom mane k value beshi, hence right k komabo,, 
                 res = k      # res update, 6 hobe initial 
                 r = k - 1
             else:
