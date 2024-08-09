@@ -26,7 +26,7 @@ class Solution:
                     return min(Aright, Bright)
                 # even
                 return (max(Aleft, Bleft) + min(Aright, Bright)) / 2
-            elif Aleft > Bright:
+            elif Aleft > Bright:   # left partition is greater than rigth partition 
                 r = i - 1
             else:
                 l = i + 1
