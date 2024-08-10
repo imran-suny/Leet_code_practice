@@ -8,7 +8,7 @@ class Solution:
         while True:
             slow = nums[slow]
             fast = nums[nums[fast]]
-            if slow == fast:
+            if slow == fast:   # beginning of cycle 
                 break
 
         slow2 = 0
