@@ -11,7 +11,7 @@ class Solution:
             if slow == fast:   # beginning of cycle 
                 break
 
-        slow2 = 0
+        slow2 = 0    # when two slow  from begnning 
         while True:
             slow = nums[slow]
             slow2 = nums[slow2]
