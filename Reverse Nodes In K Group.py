@@ -36,7 +36,7 @@ class Solution:
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:        
         # Check if we need to reverse the group
         curr = head
-        for _ in range(k):
+        for _ in range(k):     # The loop iterates k times, and in each iteration, it moves the curr pointer one step forward.
             if not curr: return head
             curr = curr.next
 				
