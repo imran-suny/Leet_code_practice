@@ -30,3 +30,27 @@ class Solution:
             curr = curr.next
             k -= 1
         return curr
+
+### easy solution 
+class Solution:
+    def reverseKGroup(self, head: ListNode, k: int) -> ListNode:        
+        # Check if we need to reverse the group
+        curr = head
+        for _ in range(k):
+            if not curr: return head
+            curr = curr.next
+				
+        # Reverse the group (basic way to reverse linked list)
+        prev = None
+        curr = head
+        for _ in range(k):
+            nxt = curr.next
+            curr.next = prev
+            prev = curr
+            curr = nxt
+        
+        # After reverse, we know that `head` is the tail of the group.   # curr = [1, 2], reverse this group to get [2, 1].
+		# And `curr` is the next pointer in original linked list order   # head.next (which is 1.next) now points to the result of reversing the next group.
+        head.next = self.reverseKGroup(curr, k)
+        return prev
+    
