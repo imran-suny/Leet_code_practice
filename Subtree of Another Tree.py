@@ -1,8 +1,8 @@
 class Solution:
     def isSubtree(self, s: TreeNode, t: TreeNode) -> bool:
-        if not t:
+        if not t:   # t-- subtree 
             return True
-        if not s:
+        if not s:   # s main tree 
             return False
         if self.sameTree(s, t):
             return True
