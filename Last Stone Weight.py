@@ -15,6 +15,6 @@ class Solution:
                 heapq.heappush(stones, first - second)
 
         # Append 0 to handle the case when there is only one stone left
-        stones.append(0)
+        stones.append(0)   #  [1,1] [0] if there is no stone left, add zero,,,,
         # Return the absolute value of the last stone weight
         return abs(stones[0])
