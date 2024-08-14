@@ -28,14 +28,14 @@ class Solution2:
         return fill
 
     def findKthLargest(self, nums: List[int], k: int) -> int:   nums = [3, 2, 1, 5, 6, 4] and k = 2
-        k = len(nums) - k        #   k =6-2=4   zero based index, 5 hole total, 3rd smallest corresponds to the 2nd largest element in the list.
+        k = len(nums) - k        #   k =6-2=4   zero based index, 4rd smallest corresponds to the 2nd largest element in the list.
         left, right = 0, len(nums) - 1   # 0, 5 
 
         while left < right:
-            pivot = self.partition(nums, left, right)  # returns the final index of the pivot after partitioning.  #   pivot = 4
+            pivot = self.partition(nums, left, right)  # returns the final index of the pivot after partitioning.  #  [3, 2, 1, 4, 5, 6]   pivot = 4
 
-            if pivot < k:                         #  pivot is smaller than the k-th largest element,    let pivot= 2, 2<4: left= 2+1 = 3 
-                left = pivot + 1                  # search in right subarray
+            if pivot < k:                         #  pivot is smaller than the k-th largest element,    let k= 5 , pivot<5: pivot 5th element theke choto,  
+                left = pivot + 1                  # search in right subarray, left update--- pivot+1... [nums, 5, 5] , retun  6 
             elif pivot > k:
                 right = pivot - 1
             else:
