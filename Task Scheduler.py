@@ -1,4 +1,5 @@
-class Solution:
+1. maxheap of counter > 
+Solution:    # see the explanation video
     def leastInterval(self, tasks: List[str], n: int) -> int:
         count = Counter(tasks)
         maxHeap = [-cnt for cnt in count.values()]
@@ -10,11 +11,11 @@ class Solution:
             time += 1
 
             if not maxHeap:
-                time = q[0][1]
+                time = q[0][1]   # time hobe q er second ta 
             else:
-                cnt = 1 + heapq.heappop(maxHeap)
+                cnt = 1 + heapq.heappop(maxHeap)   # -3, 2 , process korar pore count komabo... [-2, 2]
                 if cnt:
-                    q.append([cnt, time + n])
+                    q.append([cnt, time + n])      # [cnt, position + n]
             if q and q[0][1] == time:
                 heapq.heappush(maxHeap, q.popleft()[0])
         return time
