@@ -1,4 +1,4 @@
-1. maxheap of counter > 
+1. maxheap of counter > q for maxheap kkn available ([cnt, time + n])
 Solution:    # see the explanation video
     def leastInterval(self, tasks: List[str], n: int) -> int:
         count = Counter(tasks)
