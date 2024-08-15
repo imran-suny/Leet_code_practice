@@ -16,7 +16,7 @@ Solution:    # see the explanation video
                 cnt = 1 + heapq.heappop(maxHeap)   # -3, 2 , process korar pore count komabo... [-2, 2]
                 if cnt:
                     q.append([cnt, time + n])      # [cnt, position + n]
-            if q and q[0][1] == time:
+            if q and q[0][1] == time:    # time =2, q = [-2,2], so -2 now availabe to process, so add it to the q
                 heapq.heappush(maxHeap, q.popleft()[0])
         return time
 
