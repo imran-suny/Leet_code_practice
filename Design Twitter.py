@@ -6,7 +6,7 @@ class Twitter:
         self.followMap = defaultdict(set)   # store user relationships: userId -> set of followeeId
 
     def postTweet(self, userId: int, tweetId: int) -> None:
-        self.tweetMap[userId].append([self.count, tweetId])
+        self.tweetMap[userId].append([self.count, tweetId])  #[[0, 101], [-1, 102]]
         self.count -= 1
 # User 1's tweets: [(3, 101), (2, 3), (1, 5)] 2's tweets: [(4, 201), (3, 102)] 3's tweets: [(5, 301), (2, 6)]
     def getNewsFeed(self, userId: int) -> List[int]: 
