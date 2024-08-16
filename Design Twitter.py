@@ -3,9 +3,9 @@ class Twitter:
     def __init__(self):  
         self.count = 0                      # track tweet timestamps
         self.tweetMap = defaultdict(list)   # store user tweets: userId -> list of [count, tweetIds]
-        self.followMap = defaultdict(set)   # store user relationships: userId -> set of followeeId
+        self.followMap = defaultdict(set)   # k kake follow korse : userId -> set of followeeId
 
-    def postTweet(self, userId: int, tweetId: int) -> None:
+    def postTweet(self, userId: int, tweetId: int) -> None: k kkn ki post korse 
         self.tweetMap[userId].append([self.count, tweetId])  #[[0, 101], [-1, 102]]
         self.count -= 1
 # User 1's tweets: [(3, 101), (2, 3), (1, 5)] 2's tweets: [(4, 201), (3, 102)] 3's tweets: [(5, 301), (2, 6)]
