@@ -20,7 +20,7 @@ class Solution:
                 if idx > i and candidates[idx] == candidates[idx - 1]:          # Skip duplicates to avoid repeating the same combination.
                     continue
                 subset.append(candidates[idx])
-                backtrack(idx + 1, comb, tot + candidates[idx])
+                backtrack(idx + 1, subset, tot + candidates[idx])
                 subset.pop()
         candidates.sort()
         backtrack(0, [], 0)
