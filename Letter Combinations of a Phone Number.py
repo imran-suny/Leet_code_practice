@@ -18,7 +18,7 @@ class Solution:
                 res.append(curStr)
                 return
             for c in digitToChar[digits[i]]:   #  In Python, strings are immutable, meaning that each time you concatenate a string, a new string is created
-                backtrack(i + 1, curStr + c)   # retrun to curStr not curstr + C, hence no need to pop()
+                backtrack(i + 1, curStr + c)   # no need to pop() # abc--def.. 'ad' pore jump backtrack(1, a)-- backtk(2, ae)-  
         if digits:
             backtrack(0, "")
         return res
