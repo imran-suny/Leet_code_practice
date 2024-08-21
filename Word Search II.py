@@ -60,7 +60,7 @@ class Solution:
                 r not in range(ROWS) 
                 or c not in range(COLS)
                 or board[r][c] not in node.children
-                or node.children[board[r][c]].refs < 1
+                or node.children[board[r][c]].refs < 1  # ref> 1 means there are still words in Trie that can be formed by continuing the search from this node.
                 or (r, c) in visit
             ):
                 return
