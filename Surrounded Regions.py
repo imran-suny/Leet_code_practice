@@ -16,7 +16,7 @@ class Solution:
         for r in range(rows):               # Step 1: Capture unsurrounded regions (O -> T)
             for c in range(cols):
                 if board[r][c] == "O" and (r in [0, rows - 1] or c in [0, cols - 1]):
-                    capture(r, c)
+                    capture(r, c)      # either at top boundary (r == 0) or the bottom boundary (r == rows - 1)
                  
         for r in range(rows):              # Step 2: Capture surrounded regions (O -> X)
             for c in range(cols):
