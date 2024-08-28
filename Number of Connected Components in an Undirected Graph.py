@@ -6,8 +6,8 @@ class UnionFind:
         self.rank = [1] * n
         self.count = n
     
-    def find(self, x):
-        if self.parent[x] != x:
+    def find(self, x):             # find(0)- self.parent[0] == 0 return 0 
+        if self.parent[x] != x:    # find(3)- not equal-> parent[3]= find(0)---> return parent[x]=0  
             self.parent[x] = self.find(self.parent[x])
         return self.parent[x]
     
