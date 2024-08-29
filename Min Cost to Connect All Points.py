@@ -21,13 +21,13 @@ class Solution:
         res = 0
         visit = set()
         # Initialize min heap with starting point
-        minH = [[0, 0]]  # [cost, point]
+        minH = [[0, 0]]  # [cost, point]   # cost or weight, je choto take pop 
         
-        # Prim's Algorithm
+        # Prim's Algorithm  finds Minimum Spanning Tree (MST) of a connected, undirected graph with weighted edges
         while len(visit) < N:
             cost, i = heapq.heappop(minH)              # Pop minimum cost edge from heap
-            if i in visit:                             # Skip if node is already visited
-                continue
+            if i in visit:                             #  visited hole explore next edges
+                continue                      # 1. Create edges using adjacency list 2. pop min/starting point 3. point added to visit 4. Add adjacent nodes to heap
             res += cost
             visit.add(i)
             # Add adjacent nodes to heap
