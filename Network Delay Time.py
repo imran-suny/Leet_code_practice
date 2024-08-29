@@ -1,6 +1,6 @@
 https://leetcode.com/problems/network-delay-time/solutions/4746258/90-1-approach-1-dijkstra-s-algorithm-o-e-log-v-python-c-step-by-step-explanation/
 https://leetcode.com/problems/network-delay-time/description/
-class Solution:              # Dijkstra's algorithm
+class Solution:                            # Dijkstra's algorithm--computes shortest path from a starting node to all other nodes
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
         edges = collections.defaultdict(list)      # Create a defaultdict to store the adjacency list representation of the graph
         for u, v, w in times:
