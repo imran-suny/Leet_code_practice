@@ -23,3 +23,7 @@ class Solution:                            # Dijkstra's algorithm--computes shor
 
 
         # O(E * logV)
+
+Dijkstra’s on directed and undirected graphs. Prim’s is on undirected graphs.  initializes the distance of the source vertex to 0 and all others to infinity.
+Dijkstra finds the shortest path from one source to all other vertices.
+Prims on spanning tree that covers all vertices with the minimum total edge weight. initializes cost of all vertices to infinity, except for the starting vertex which is set to 0.
