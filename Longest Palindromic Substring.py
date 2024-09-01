@@ -9,8 +9,8 @@ class Solution:
         res = ""                                  # Initialize an empty string to store the longest palindromic substring found so far      
         resLen = 0                                # Initialize a variable to keep track of the length of the longest palindrome           
         for i in range(len(s)):                   # Iterate through each character in the string     
+            
             l, r = i, i                           # Odd-length palindromes: # Set left and right pointers to the current index
-   
             while l >= 0 and r < len(s) and s[l] == s[r]:    
                 if (r - l + 1) > resLen:          # Check if substring between l and r is a palindrome
                     res = s[l : r + 1]            # Update res if a longer palindrome is found 
