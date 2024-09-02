@@ -12,7 +12,7 @@ class Solution:
             for w in wordDict:                    # leet 
                 if (i + len(w)) <= len(s) and s[i : i + len(w)] == w:   # (i=4+ len(w) 4=8)... [4:8] # make dp[4]=true and dp [0]=true
                     dp[i] = dp[i + len(w)]        # dp[4]=dp[8]=true
-                if dp[i]:
+                if dp[i]:   # if a word found break for loop 
                     break
                                                print(dp) #[True, False, False, False, True, False, False, False, True]
         return dp[0]
