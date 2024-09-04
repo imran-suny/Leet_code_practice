@@ -15,10 +15,10 @@ class Solution:
             memory[(l, r)] = 0
             # Iterate over all possible choices of bursting balloons within the range [l, r]
             for i in range(l, r + 1):
-                coins = nums[l - 1] * nums[i] * nums[r + 1]  # if nums[i] pops last
-                coins += dfs(l, i - 1) + dfs(i + 1, r)        # left and right sub array 
+                coins = nums[l - 1] * nums[i] * nums[r + 1]  # if nums[i] pops last, 3 pops last --> 1*3*1= 3 
+                coins += dfs(l, i - 1) + dfs(i + 1, r)        # left and right sub array # dfs(1, 0)- return 0   # dfs(2, 3)
                 # Update maximum coins for the current range [l, r]
                 memory[(l, r)] = max(memory[(l, r)], coins)
             
             return memory[(l, r)]
-        return dfs(1, len(nums) - 2)     # nums = [1] + nums + [1]  , len(nums) - 1 gives last value, so -2 gives nums
+        return dfs(1, len(nums) - 2)     # we added extra 2 number hence, nums = [1] + nums + [1]  , len(nums) - 1= lst , so -2 gives nums
