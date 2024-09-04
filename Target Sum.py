@@ -6,13 +6,10 @@ class Solution:
         dp = {}  # (index, total) -> # of ways
         
         def backtrack(i, total):
-            # Base case: If we have processed all elements in nums,
-            # check if the total equals the target.
+            # If we have processed all elements in nums check if the total equals the target.
             if i == len(nums):
                 return 1 if total == target else 0
-            
-            # Memoization: If we have already computed the number of ways
-            # for the current index and total, return the stored value.
+        
             if (i, total) in dp:
                 return dp[(i, total)]
             
