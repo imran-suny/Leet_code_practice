@@ -12,7 +12,7 @@ class Solution:
             if i == len(s):  # If we've exhausted all characters of s
                 return 0
             if (i, j) in memo:
-                return memo[(i, j)]
+                return memo[(i, j)]    # dfs(1, 1) many time, memo[(1, 1)] just 1bar calculation
         
             if s[i] == t[j]:
                 # If the characters match, either use the character or skip it
