@@ -10,14 +10,13 @@ class Solution:
                 return cache[(i, j)]
             if i >= len(s) and j >= len(p):
                 return True
-            if j >= len(p):
+            if j >= len(p):   # s= aa  p=a  j out of bound 
                 return False
 
-            match = i < len(s) and (s[i] == p[j] or p[j] == ".")
-            if (j + 1) < len(p) and p[j + 1] == "*":
+            match = i < len(s) and (s[i] == p[j] or p[j] == ".")  
+            if (j + 1) < len(p) and p[j + 1] == "*":        ## first ta * hote parbe an...so p[j+1]
                 cache[(i, j)] = dfs(i, j + 2) or (  # dont use *
-                    match and dfs(i + 1, j)
-                )  # use *
+                    match and dfs(i + 1, j))     # matching holei sudhu * use korbo              
                 return cache[(i, j)]
             if match:
                 cache[(i, j)] = dfs(i + 1, j + 1)
