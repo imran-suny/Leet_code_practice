@@ -17,5 +17,5 @@ class Solution:
         res = 0
         while n:               # n !< =0 
             res = res+ n%2         # 1011 % 2 = 1, 101% 2 = 1 , 10%2 =0 1% 2 = 1 , so total 3 1 
-            n = n >> 1
+            n = n >> 1   # vagsesh and right shift mane right theke ekta bad
         return res
