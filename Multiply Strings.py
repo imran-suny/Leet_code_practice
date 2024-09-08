@@ -15,7 +15,7 @@ class Solution:
                 res[i1 + i2 + 1] += res[i1 + i2] // 10
                 res[i1 + i2] = res[i1 + i2] % 10
 
-        res, beg = res[::-1], 0
+        res, beg = res[::-1], 0              # 10*10 =100 but in our case 0100 
         while beg < len(res) and res[beg] == 0:
             beg += 1
         res = map(str, res[beg:])
