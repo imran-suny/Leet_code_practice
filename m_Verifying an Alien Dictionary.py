@@ -7,13 +7,13 @@ class Solution:
         # first differing char
         # if word A is prefix of word B, word B must be AFTER word A
 
-        orderInd = { c : i for i, c in enumerate(order)}
+        orderInd = { c : i for i, c in enumerate(order)}    ## mathay asbe but use enumerate 1. value check char same na hole 2. second word finish/prefix hole 
         
         for i in range(len(words) - 1):
             w1, w2 = words[i], words[i + 1]
             
             for j in range(len(w1)):
-                if j == len(w2):
+                if j == len(w2):    # first word ache but second sesh, False 
                     return False
                 
                 if w1[j] != w2[j]:
