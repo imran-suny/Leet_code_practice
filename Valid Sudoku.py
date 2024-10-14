@@ -2,6 +2,7 @@ https://leetcode.com/problems/valid-sudoku/description/
 my_dict = {'a': 1, 'b': 2, 'c': 3}
 print(my_dict['a'])  # Output: 1
 print(my_dict['d'])  # Raises KeyError: 'd' not in my_dict
+rows = {0: {"5", "3", "7"}}   cols = {0: {"5"}, 1: {"3"}, 4: {"7"}}   squares = {(0, 0): {"5", "3"}, (0, 1): {"7"}}
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
