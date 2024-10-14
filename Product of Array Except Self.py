@@ -14,10 +14,10 @@ for i in range(1, len(nums)):        # prefix means left to right multiplication
 postfix = 1
 for i in range(len(nums) - 1, -1, -1):   # postfix reverse mul [24,24,12,4] // for each mul Prefix*Postfix  # [3, 2, 1] 0 hole, -1 hole sob [3, 2, 1, 0]
     res[i] = res[i] * postfix                 # to keep last position fix, mul with 1. postfix =1 res[4] = res[4]*1= res[4]
-    print('post', res)                   # multiplies the current value at index i in the res with the current value of the postfix variable.
+       #print('post', res)                   # multiplies the current value at index i in the res with the current value of the postfix variable.
     postfix = postfix * nums[i]                # portfix = 1 * num[last] = 1*4 = 4 
-    print('postfix', postfix)            # 4*2= 8 
-print( res)
+       # print('postfix', postfix)            # 4*2= 8 
+return res
 
 Output:::: 
 pre [1, 1, 1, 1]
