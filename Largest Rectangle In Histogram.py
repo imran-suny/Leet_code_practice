@@ -13,7 +13,7 @@ class Solution:
             while stack and stack[-1][1] > h:
                 index, height = stack.pop()
                 maxArea = max(maxArea, height * (i - index)) # calculate width of rectangle by subtracting starting index  from current index.
-                start = index  # Push the current bar's index
+                start = index                                 # Push the current bar's index
             stack.append((start, h))
             
 #After processing all bars, there may still be bars left in the stack. For each remaining bar in the stack,
