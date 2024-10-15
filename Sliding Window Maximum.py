@@ -8,7 +8,7 @@ class Solution:
         while r < len(nums):
             while q and nums[q[-1]] < nums[r]: # pop smaller values from q
                 q.pop()
-            q.append(r)  # [1, 2, 3, 4] [1, 2, 3])
+            q.append(r)  # 
            
             if l > q[0]:   # if the index at the front of the deque is outside the current window
                 q.popleft()  # q = deque([4])  if 2 > 4: q.popleft()  # ([2, 3, 4])
