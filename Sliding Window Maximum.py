@@ -19,9 +19,8 @@ class Solution:
             r += 1
         return output
 
-Initial--- output = [] r = 0: nums[0] = 1 -- q.append(right)-- q = deque([0])
+output = [] r = 0: nums[0] = 1 -- q.append(right)-- q = deque([0])
 r = 1: r=1 < len(nums)=8 -->  nums[q[-1]] nums[0]1< nums[r]3... O pop, q = deque([1]) (after popping index 0)
-
 r = 2: nums[2] = -1 q = deque([1, 2])    Window size is 3, append nums[q[0]  nums[1] = 3 to output.   output = [3]
 l = 1 # only when while works, window update 
 
