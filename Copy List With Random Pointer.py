@@ -1,7 +1,7 @@
 https://leetcode.com/problems/copy-list-with-random-pointer/description/
 Input: head = [[7,null],[13,0],[11,4],[10,2],[1,0]]
 Output: [[7,null],[13,0],[11,4],[10,2],[1,0]]
-
+steps: 1. value map  [create node with value] 2. pointer map 
 class Solution:
     def copyRandomList(self, head: "Node") -> "Node":
         dict = {None: None}   # cur jokhon null hobe, last one # a hashmap map to map the original nodes to their corresponding new nodes.
