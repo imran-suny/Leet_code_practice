@@ -9,13 +9,13 @@ class Solution:
                 return mid
             # left sorted portion
             if nums[l] <= nums[mid]:
-                if target > nums[mid] or target < nums[l]:
+                if target > nums[mid] or target < nums[l]:    # but target in right half 
                     l = mid + 1
                 else:
                     r = mid - 1
             # right sorted portion
             else:
-                if target < nums[mid] or target > nums[r]:
+                if target < nums[mid] or target > nums[r]:   # # but target in left half 
                     r = mid - 1
                 else:
                     l = mid + 1
