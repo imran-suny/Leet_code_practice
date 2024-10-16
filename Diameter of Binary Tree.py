@@ -5,7 +5,7 @@ class Solution:
         res = 0
 
         def dfs(root):
-            nonlocal res
+            nonlocal res    #  inner function to modify the value of the variable in the outer function
 
             if not root:
                 return 0
