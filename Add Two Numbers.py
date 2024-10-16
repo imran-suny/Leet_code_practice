@@ -16,7 +16,7 @@ class Solution:
             # new digit
             val = v1 + v2 + carry
             carry = val // 10
-            val = val % 10
+            val = val % 10    # 7%10= 7, 13%5= 3 ke node, carry hobe 2
             cur.next = ListNode(val)
 
             # update ptrs
