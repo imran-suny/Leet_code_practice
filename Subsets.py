@@ -3,7 +3,7 @@ class Solution:
         res = []
         subset = []
         def dfs(i):
-            if i >= len(nums):
+            if i == len(nums):
                 res.append(subset.copy())
                 return
             # decision to include nums[i]
