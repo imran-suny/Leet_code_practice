@@ -4,11 +4,9 @@ class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         if not grid or not grid[0]:
             return 0
-
         islands = 0
         visit = set()   # visit should be a set, so no duplicate
         rows, cols = len(grid), len(grid[0])
-
         def dfs(r, c):
             if (                     # base/stopping case 
                 r not in range(rows)
@@ -17,11 +15,18 @@ class Solution:
                 or (r, c) in visit     # already visit hole 
             ):
                 return
-
             visit.add((r, c))         # add visiting point 
-            directions = [[0, 1], [0, -1], [1, 0], [-1, 0]]   # all fourth direction
-            for dr, dc in directions:
-                dfs(r + dr, c + dc)                          # check 1 kina/ island kina ?
+            dfs(r+1,c)
+            dfs(r-1,c) 
+            dfs(r,c+1) 
+            dfs(r,c-1)                           # check 1 kina/ island kina ?              
+# From every position, we check if there is an island by [3,3] = 1 and [3,3] not in the visit list 
+        for r in range(rows):
+            for c in range(cols):
+                if grid[r][c] == "1" and (r, c) not in visit:
+                    islands += 1
+                    dfs(r, c)
+        return islands
               
 # From every position, we check if there is an island by [3,3] = 1 and [3,3] not in the visit list 
         for r in range(rows):
