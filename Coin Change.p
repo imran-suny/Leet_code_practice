@@ -6,7 +6,7 @@ Explanation: 7 = 3+7
 
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        dp = [amount + 1] * (amount + 1) #   [8, 8, 8, 8, 8, 8, 8, 8]  
+        dp = [amount + 1] * (amount + 1) #   [8, 8, 8, 8, 8, 8, 8, 8]  # dp[0] nisi ei jonno 8 ta 
         dp[0] = 0                        #   Base case: Zero coins are required to make the amount 0
                                          # Iterate through each amount from 1 to 'amount'
         for a in range(1, amount + 1):   # dp[0]=0 so 1 theke start 
