@@ -16,12 +16,8 @@ class Solution {             # In Java integers, are by default 32-bit signed tw
 python: bitShort is initialized to 0xffffffff, which is a 32-bit integer with all bits set to 1 except for the sign bit.
 class Solution:
     def getSum(self, a: int, b: int) -> int:
-        
-        bitShort = 0xffffffff 
-
-        while b & bitShort != 0:
+        while b != 0:
             carry = (a & b) << 1
             a = a ^ b
             b = carry
-
-        return a & bitShort if b > 0 else a
+        return a  if b > 0 else a
