@@ -20,4 +20,4 @@ class Solution:
             carry = (a & b) << 1
             a = a ^ b
             b = carry
-        return a  if b > 0 else a
+        return a
