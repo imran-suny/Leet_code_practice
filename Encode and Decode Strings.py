@@ -22,3 +22,34 @@ Here, we append the size of the word when encoding.
             res.append( str[h + 1: h + 1 + size])     # 2: (2+4=6)    2,3,4,5
             i = h + 1 + size                    # i pointer increase to 6 number a 
         return res
+
+class Codec:
+
+    def encode(self, strs):
+        encoded_str = ""
+        for s in strs:
+            encoded_str += str(len(s)) + "#" + s
+        return encoded_str
+
+    def decode(self, s):
+        decoded_list = []
+        i = 0
+        while i < len(s):
+            # Find the position of the delimiter '#'
+            j = s.find('#', i)
+            # Extract the length of the next string
+            length = int(s[i:j])
+            # Extract the actual string
+            decoded_list.append(s[j+1:j+1+length])
+            i = j + 1 + length
+        return decoded_list
+        
+        
+codec = Codec()        # Encode
+strs = ["hello", "world"]
+encoded = codec.encode(strs)
+print(f"Encoded: {encoded}")  # Output: "5#hello5#world"
+
+# Decode
+decoded = codec.decode(encoded)
+print(f"Decoded: {decoded}")  # Output: ["hello", "world"]
