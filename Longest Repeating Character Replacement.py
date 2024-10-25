@@ -9,10 +9,11 @@ class Solution:
         count = {}                                 # for get method we need a dict 
         l = 0                                      # left pointer 
         res = 0
+        maxf=0
         for r in range(len(s)):                    # right pointer, automatically updated with +1
-            count[s[r]] = 1 + count.get(s[r], 0)   # count most frequent letter in a window         # 
-
-            while (r - l + 1) - max(count.values()) > k:  # update left pointer                       (window length) -  (most frequent character) > k
+            count[s[r]] = 1 + count.get(s[r], 0) 
+            maxf = max(maxf, count[s[r]])
+            while ((r - l + 1) - maxf) > k:  # update left pointer                       (window length) -  (most frequent character) > k
                 count[s[l]] -= 1                       # remove left postion value  
                 l += 1                               # update left pointer 
         res = max (res, r-l+1)
