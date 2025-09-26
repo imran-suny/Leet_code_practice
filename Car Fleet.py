@@ -10,3 +10,4 @@ class Solution:
             if len(stack) >= 2 and stack[-1] <= stack[-2]:
                 stack.pop() # Stack: [1.0, 7.0, 3.0], stack[-1] <= stack[-2] pop the last element.Stack: [1.0, 7.0]
         return len(stack)
+# testing
